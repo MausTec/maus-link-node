@@ -9,6 +9,7 @@ import (
 	"log"
 	"net/http"
 	"flag"
+	"os"
 )
 
 var upgrader = websocket.Upgrader{
@@ -136,11 +137,16 @@ func main() {
 
 	router := setupRoutes()
 
+	port := os.Getenv("PORT")
+	if port == "" {
+		port = "8080"
+	}
+
 	if *use_tls {
-		err := http.ListenAndServeTLS(":8084", "assets/development.crt", "assets/development.key", router)
+		err := http.ListenAndServeTLS(":" + port, "assets/development.crt", "assets/development.key", router)
 		log.Fatal(err)
 	} else {
-		err := http.ListenAndServe(":8080", router)
+		err := http.ListenAndServe(":" + port, router)
 		log.Fatal(err)
 	}
 }
