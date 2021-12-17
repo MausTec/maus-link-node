@@ -20,9 +20,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="af77116c-e56d-40b5-9f21-9df28636b902" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/cmd/.keep" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cloudbuild.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmd/maus-link/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,7 +59,16 @@
       <recent name="C:\Users\eiser.000\go\src\maus-link-node\assets" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Go Build.go build maus-link-node">
+    <configuration name="go build maus-link-node" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="maus-link-node" />
+      <working_directory value="$PROJECT_DIR$" />
+      <kind value="PACKAGE" />
+      <filePath value="$PROJECT_DIR$/main.go" />
+      <package value="maus-link-node" />
+      <directory value="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
     <configuration name="go build maus-link-node/cmd/maus-link" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="maus-link-node" />
       <working_directory value="$PROJECT_DIR$" />
@@ -72,6 +81,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Go Build.go build maus-link-node" />
         <item itemvalue="Go Build.go build maus-link-node/cmd/maus-link" />
       </list>
     </recent_temporary>
@@ -100,31 +110,32 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="-1234" y="317" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1639379408951">
       <screen x="-1920" y="0" width="1920" height="1032" />
     </state>
     <state x="-1234" y="317" key="#com.intellij.fileTypes.FileTypeChooser/-1920.0.1920.1032/0.0.2560.1392@-1920.0.1920.1032" timestamp="1639379408951" />
-    <state width="1877" height="279" key="GridCell.Tab.0.bottom" timestamp="1639380219745">
+    <state width="1877" height="279" key="GridCell.Tab.0.bottom" timestamp="1639702320175">
       <screen x="-1920" y="0" width="1920" height="1032" />
     </state>
-    <state width="1877" height="279" key="GridCell.Tab.0.bottom/-1920.0.1920.1032/0.0.2560.1392@-1920.0.1920.1032" timestamp="1639380219745" />
+    <state width="1877" height="279" key="GridCell.Tab.0.bottom/-1920.0.1920.1032/0.0.2560.1392@-1920.0.1920.1032" timestamp="1639702320175" />
     <state width="1238" height="279" key="GridCell.Tab.0.bottom/-1920.0.1920.1032/0.0.2560.1392@0.0.2560.1392" timestamp="1639376183977" />
-    <state width="1877" height="279" key="GridCell.Tab.0.center" timestamp="1639380219745">
+    <state width="1877" height="279" key="GridCell.Tab.0.center" timestamp="1639702320175">
       <screen x="-1920" y="0" width="1920" height="1032" />
     </state>
-    <state width="1877" height="279" key="GridCell.Tab.0.center/-1920.0.1920.1032/0.0.2560.1392@-1920.0.1920.1032" timestamp="1639380219745" />
+    <state width="1877" height="279" key="GridCell.Tab.0.center/-1920.0.1920.1032/0.0.2560.1392@-1920.0.1920.1032" timestamp="1639702320175" />
     <state width="1238" height="279" key="GridCell.Tab.0.center/-1920.0.1920.1032/0.0.2560.1392@0.0.2560.1392" timestamp="1639376183976" />
-    <state width="1877" height="279" key="GridCell.Tab.0.left" timestamp="1639380219745">
+    <state width="1877" height="279" key="GridCell.Tab.0.left" timestamp="1639702320175">
       <screen x="-1920" y="0" width="1920" height="1032" />
     </state>
-    <state width="1877" height="279" key="GridCell.Tab.0.left/-1920.0.1920.1032/0.0.2560.1392@-1920.0.1920.1032" timestamp="1639380219745" />
+    <state width="1877" height="279" key="GridCell.Tab.0.left/-1920.0.1920.1032/0.0.2560.1392@-1920.0.1920.1032" timestamp="1639702320175" />
     <state width="1238" height="279" key="GridCell.Tab.0.left/-1920.0.1920.1032/0.0.2560.1392@0.0.2560.1392" timestamp="1639376183976" />
-    <state width="1877" height="279" key="GridCell.Tab.0.right" timestamp="1639380219745">
+    <state width="1877" height="279" key="GridCell.Tab.0.right" timestamp="1639702320175">
       <screen x="-1920" y="0" width="1920" height="1032" />
     </state>
-    <state width="1877" height="279" key="GridCell.Tab.0.right/-1920.0.1920.1032/0.0.2560.1392@-1920.0.1920.1032" timestamp="1639380219745" />
+    <state width="1877" height="279" key="GridCell.Tab.0.right/-1920.0.1920.1032/0.0.2560.1392@-1920.0.1920.1032" timestamp="1639702320175" />
     <state width="1238" height="279" key="GridCell.Tab.0.right/-1920.0.1920.1032/0.0.2560.1392@0.0.2560.1392" timestamp="1639376183977" />
     <state x="-1459" y="160" key="SettingsEditor" timestamp="1639380120941">
       <screen x="-1920" y="0" width="1920" height="1032" />

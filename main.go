@@ -3,12 +3,13 @@ package main
 import (
 	"crypto/rand"
 	"encoding/hex"
+	"encoding/json"
+	"flag"
 	"fmt"
-	"github.com/gorilla/websocket"
 	"github.com/gorilla/mux"
+	"github.com/gorilla/websocket"
 	"log"
 	"net/http"
-	"flag"
 	"os"
 )
 
@@ -36,7 +37,31 @@ func reader(conn *websocket.Conn, id string) {
 			return
 		}
 
-		fmt.Println(string(p))
+		fmt.Println(">" + string(p))
+
+		var rawJson map[string]json.RawMessage
+		err = json.Unmarshal(p, &rawJson)
+		if err != nil {
+			log.Println(err)
+			return
+		}
+
+		// Check for special server commands:
+		if _, ok := rawJson["getDeviceKey"]; ok {
+			connectAck := ConnectPayload {
+				DeviceKey: id,
+			}
+
+			log.Println("Processing getDeviceKey request.")
+
+			err = conn.WriteJSON(connectAck)
+			if err != nil {
+				log.Println(err)
+				return
+			}
+
+			delete(rawJson, "getDeviceKey")
+		}
 
 		if clientMap[id] != nil {
 			for _, client := range clientMap[id] {
@@ -57,7 +82,7 @@ func writer(conn *websocket.Conn, id string) {
 			return
 		}
 
-		fmt.Println(string(p))
+		fmt.Println("<" + string(p))
 
 		if deviceMap[id] != nil {
 			if err := deviceMap[id].WriteMessage(messageType, p); err != nil {
@@ -133,7 +158,7 @@ func setupRoutes() *mux.Router {
 
 func main() {
 	fmt.Println("Starting server...")
-	use_tls := flag.Bool("tls", false, "Use TLS")
+	useTls := flag.Bool("tls", false, "Use TLS")
 
 	router := setupRoutes()
 
@@ -142,7 +167,7 @@ func main() {
 		port = "8080"
 	}
 
-	if *use_tls {
+	if *useTls {
 		err := http.ListenAndServeTLS(":" + port, "assets/development.crt", "assets/development.key", router)
 		log.Fatal(err)
 	} else {
